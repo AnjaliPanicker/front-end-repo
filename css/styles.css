@@ -1,0 +1,229 @@
+ /* Student Name: Anjali Rajappa Panicker
+ File Name: styles.css
+ Date: 15-06-2024 */
+
+/*CSS Reset*/
+body,
+header,
+nav,
+main,
+footer,
+h1,
+div,
+img,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color:aliceblue;
+}
+
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rule for header */
+header {
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgb(145, 214, 241);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+header img {
+    margin: 0 auto;
+}
+
+/* Style for rules for navigation area */
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+nav li {
+    font-size: 1.5em;
+    font-family: "Francois One", sans-serif;
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    color: olive;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+.banner {
+    height: 50vh;
+}
+
+.align {
+    padding-left: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+.logo-align {
+    padding-right: 25%;
+    display: inline-block; 
+}
+
+.nav-align {
+    display: inline-block; 
+}
+
+.logo {
+    position: relative;
+    top: 50px;
+    left: 80px;
+    width: 100px;
+}
+
+main {
+    background-color: #fff;
+    padding: 2%;
+    font-size: 1.15em;
+    font-family: "Roboto Slab", serif;
+    display: block;
+}
+
+.action {
+    font-size: 1.35em;
+    color: steelblue;
+    font-weight: bold;
+}
+
+.link-action {
+    text-decoration: none;
+    font-weight: bold;
+    color: tomato;
+}
+
+.text-align {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.specials {
+    color: crimson;
+    font-weight: bold;
+    font-size: 2.2em;
+}
+
+.section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.best-seller {
+    color: teal;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.product-content {
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.list-align {
+    padding-left: 10%;
+}
+
+.product-feature {
+    color: purple;
+    font-weight: bold;
+}
+
+.best-product-img {
+    width: 45%;
+    height: 45%;
+    padding: 3% 0 3% 27%;
+}
+
+.weekly-product-img {
+    width: 45%;
+    height: 45%;
+    padding: 3% 0 3% 35%;
+}
+
+.product-name {
+    color: sienna;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.card-align {
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.padding {
+    padding-left: 25%;
+}
+
+.limited {
+    color: red;
+    font-weight: bold;
+}
+
+.guarantee-img {
+    width: 25%;
+    height: 25%;
+    padding: 0 0 3% 37%;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+/* .column {
+    float: left;
+    width: 20%;
+    height: 20%;
+    padding: 5px;
+  } */
+  
+  /* Clear floats after image containers */
+  /* .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+
+/* Style rules for footer content */
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: teal;
+    padding: 0 1em;
+    margin-top: 20px;
+}
+
+footer p a {
+    color: teal;
+    text-decoration: none;
+}
