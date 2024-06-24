@@ -83,11 +83,11 @@ nav li a {
 
 .logo-align {
     padding-right: 25%;
-    display: inline-block; 
+    /* display: inline-block;  */
 }
 
 .nav-align {
-    display: inline-block; 
+    /* display: inline-block;  */
 }
 
 .logo {
