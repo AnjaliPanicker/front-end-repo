@@ -1,0 +1,266 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+/* Image */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+header {
+    margin: 20px 0;
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgb(145, 214, 241);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation */
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Logo and Nav items */
+    align-items: center; /* Vertical centering */
+}
+
+.logo-align {
+    margin-right: 1em; /* Space between logo and nav */
+}
+
+nav ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
+    gap: 1em; /* Space between items */
+    justify-content: end; /* Align to the right */
+    overflow-x: auto; /* Allow scrolling if necessary */
+}
+
+nav li {
+    font-size: 1.5em;
+    font-family: "Francois One", sans-serif;
+}
+
+nav li a {
+    display: block;
+    color: olive;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+nav li a:hover {
+    color: white; /* Change text color on hover */
+    background-color: steelblue; /* Background color on hover */
+}
+
+.logo {
+    width: 80px; /* Adjust logo size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Main Content */
+main {
+    background-color: #fff;
+    padding: 2%;
+    font-size: 1.15em;
+    font-family: "Roboto Slab", serif;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Form */
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    font-family: 'Francois One', sans-serif;
+    color: steelblue;
+    font-size: 1.5em;
+}
+
+ol {
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: steelblue;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="reset"] {
+    background-color: olive;
+}
+
+/* Aligning Preferred Contact Method on the Same Line */
+.contact-method-group {
+    display: flex;
+    align-items: center;
+}
+
+.contact-method-group label {
+    margin-right: 10px;
+}
+
+.contact-method-group input {
+    margin-right: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    nav {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        text-align: center;
+    }
+
+    nav ul {
+        grid-auto-flow: row; /* Vertical layout */
+        justify-content: center; /* Center items */
+    }
+
+    nav li {
+        margin: 0.5em 0; /* Space between items */
+    }
+}
+
+@media (min-width: 426px) and (max-width: 630px) {
+    nav {
+        grid-template-columns: auto 1fr; /* Maintain logo and nav layout */
+    }
+
+    nav ul {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns for tablets */
+        justify-content: start; /* Align items to the left */
+    }
+}
+
+@media (min-width: 630px) {
+    .tablet-view {
+        display: block;
+    }
+
+    .mobile-view {
+        display: none;
+    }
+}
+
+@media (min-width: 1015px) {
+    main {
+        clear: both;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+
+    .tablet-view, .mobile-view {
+        display: none;
+    }
+}
+
+@media (min-width: 1921px) {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+@media print {
+    body {
+        background-color: aliceblue;
+        color: #000;
+    }
+}
+
+/* Footer */
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: teal;
+    padding: 0 1em;
+    margin-top: 20px;
+}
+
+footer p a {
+    color: teal;
+    text-decoration: none;
+}

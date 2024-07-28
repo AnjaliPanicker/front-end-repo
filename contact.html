@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+ Student Name: Anjali Rajappa Panicker
+ File Name: contact.html
+ Date: 27-07-2024
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>PressPerfect Irons</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <!-- Header area with the website banner -->
+        <header>
+            <img src="./images/banner_2_3.jpg" alt="company banner with iron and clothes in the background"
+                class="banner">
+        </header>
+
+        <!-- Nav area with hyperlinks to other pages within the website -->
+        <nav>
+            <div class="logo-align">
+                <a href="index.html"><img src="./images/logo - Copy.png" alt="Company logo" class="logo"></a>
+            </div>
+            <div class="nav-align">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="specials.html">Specials</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Adding the main content of the webpage -->
+        <main>
+            <section>
+                <h1>Contact Us</h1>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+                        <ol>
+                            <li>Please fill out the form below to contact us:</li>
+                            <li>All fields marked with an asterisk (*) are required.</li>
+                        </ol>
+                        <div class="form-group">
+                            <label for="name">Name*</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Contact Date</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Contact*</label>
+                            <select id="reason" name="reason" required>
+                                <option value="">Select a reason</option>
+                                <option value="support">Support</option>
+                                <option value="sales">Sales</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group contact-method-group">
+                            <label>Preferred Contact Method*</label>
+                            <input type="radio" id="email_contact" name="contact_method" value="email" required>
+                            <label for="email_contact">Email</label>
+                            <input type="radio" id="phone_contact" name="contact_method" value="phone">
+                            <label for="phone_contact">Phone</label>
+                        </div>
+                        <div class="form-group contact-method-group">
+                            <label for="subscribe">Subscribe to newsletter</label>
+                            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message*</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit Request</button>
+                            <button type="reset">Reset Form</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer area with webpage footer content -->
+        <footer>
+            <p>&copy; Copyright 2024. All Rights Reserved.</p>
+            <p>Anjali Rajappa Panicker C0939698</p>
+            <p><a href="mailto:info@pressperfectirons.com">Request information</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
