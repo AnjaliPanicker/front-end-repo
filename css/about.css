@@ -1,3 +1,5 @@
+/* ABOUT */
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -165,6 +167,14 @@ footer p a {
         margin: 0.5em 0;
         /* Space between items */
     }
+
+    .tablet-view, .desktop-view {
+        display: none;
+    }
+
+    .mobile-view {
+        display: block;
+    }
 }
 
 @media (min-width: 426px) and (max-width: 630px) {
@@ -179,14 +189,22 @@ footer p a {
         justify-content: start;
         /* Align items to the left */
     }
+
+    .mobile-view, .desktop-view {
+        display: none;
+    }
+
+    .tablet-view {
+        display: block;
+    }
 }
 
-@media (min-width: 630px) {
+@media (min-width: 631px) and (max-width: 1014px) {
     .tablet-view {
         display: block;
     }
 
-    .mobile-view {
+    .mobile-view, .desktop-view {
         display: none;
     }
 }
@@ -200,8 +218,7 @@ footer p a {
         display: block;
     }
 
-    .tablet-view,
-    .mobile-view {
+    .tablet-view, .mobile-view {
         display: none;
     }
 }
