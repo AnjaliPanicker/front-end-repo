@@ -8,8 +8,7 @@
 html,
 body {
     width: 100%;
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -28,6 +27,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 /* Header */
@@ -44,67 +44,60 @@ header {
     height: auto;
 }
 
-/* Navigation */
+/* Nav */
 nav {
-    padding: 1%;
-    margin-bottom: 1%;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    /* Logo and Nav items */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    /* Vertical centering */
+    /* background-color: #333; */
+    background-color: aliceblue;
+    padding: 10px 0;
 }
 
-.logo-align {
-    margin-right: 1em;
-    /* Space between logo and nav */
+.nav-align {
+    margin: 10px 0;
 }
 
-nav ul {
+.nav-align ul {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    /* Responsive columns */
-    gap: 1em;
-    /* Space between items */
-    justify-content: end;
-    /* Align to the right */
-    overflow-x: auto;
-    /* Allow scrolling if necessary */
+    padding: 0;
+    margin: 0;
 }
 
-nav li {
-    font-size: 1.5em;
-    font-family: "Francois One", sans-serif;
+.nav-align li {
+    display: inline;
+    margin-right: 20px;
 }
 
-nav li a {
-    display: block;
-    color: olive;
-    padding: 0.5em 1em;
+.nav-align a {
     text-decoration: none;
-    border-radius: 5px;
-    /* Rounded corners for buttons */
-    transition: background-color 0.3s ease;
-    /* Smooth hover transition */
+    color: olive;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.nav-align a:hover {
+    /* text-decoration: underline; */
+    color: white; /* Change text color on hover */
+    background-color: steelblue; /* Background color on hover */
 }
 
 nav li a:hover {
-    color: white;
-    /* Change text color on hover */
-    background-color: steelblue;
-    /* Background color on hover */
+    color: white; /* Change text color on hover */
+    background-color: steelblue; /* Background color on hover */
 }
 
+/* Logo */
 .logo {
-    width: 80px;
-    /* Adjust logo size as needed */
+    width: 100px;
     height: auto;
-    /* Maintain aspect ratio */
 }
 
 /* Main Content */
 main {
+    margin: 20px;
     background-color: #fff;
     padding: 2%;
     font-size: 1.15em;
@@ -175,62 +168,60 @@ footer p a {
 }
 
 /* Responsive Styles */
-@media (max-width: 425px) {
-    nav {
-        grid-template-columns: 1fr;
-        /* Stack items vertically */
-        text-align: center;
+@media (max-width: 992px) {
+    .nav-align ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    nav ul {
-        grid-auto-flow: row;
-        /* Vertical layout */
-        justify-content: center;
-        /* Center items */
-    }
-
-    nav li {
-        margin: 0.5em 0;
-        /* Space between items */
+    .nav-align li {
+        margin: 5px 0;
     }
 }
 
-@media (min-width: 426px) and (max-width: 630px) {
-    nav {
-        grid-template-columns: auto 1fr;
-        /* Maintain logo and nav layout */
+@media (max-width: 768px) {
+    header .banner {
+        max-height: 200px;
     }
 
-    nav ul {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        /* Responsive columns for tablets */
-        justify-content: start;
-        /* Align items to the left */
-    }
-}
-
-@media (min-width: 630px) {
-    .tablet-view {
-        display: block;
-    }
-
-    .mobile-view {
-        display: none;
-    }
-}
-
-@media (min-width: 1015px) {
     main {
-        clear: both;
+        margin: 10px;
     }
 
-    .desktop-view {
-        display: block;
+    .nav-align ul {
+        display: flex;
+        flex-direction: column;
     }
 
-    .tablet-view,
-    .mobile-view {
-        display: none;
+    .nav-align li {
+        margin: 5px 0;
+    }
+
+    .nav-align a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-align ul {
+        padding: 0;
+    }
+
+    .nav-align li {
+        margin: 3px 0;
+    }
+
+    .nav-align a {
+        font-size: 0.8em;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    section h2 {
+        font-size: 1em;
     }
 }
 
@@ -238,23 +229,6 @@ footer p a {
     #container {
         width: 1920px;
         margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    figure {
-        width: 100%;
-    }
-
-    figure img {
-        width: 100%;
-        height: auto;
-        border-radius: 0;
     }
 }
 

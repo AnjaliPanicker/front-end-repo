@@ -26,56 +26,52 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 /* Header */
 header {
-    margin: 20px 0;
-    border-radius: 25px;
-    text-align: center;
-    background-color: rgb(145, 214, 241);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+    margin-bottom: 10px;
 }
 
-.banner {
-    width: 100%;
-    height: auto;
-}
-
-/* Navigation */
+/* Nav */
 nav {
-    padding: 1%;
-    margin-bottom: 1%;
-    display: grid;
-    grid-template-columns: auto 1fr; /* Logo and Nav items */
-    align-items: center; /* Vertical centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #333; */
+    background-color: aliceblue;
+    padding: 10px 0;
 }
 
-.logo-align {
-    margin-right: 1em; /* Space between logo and nav */
+.nav-align {
+    margin: 10px 0;
 }
 
-nav ul {
+.nav-align ul {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
-    gap: 1em; /* Space between items */
-    justify-content: end; /* Align to the right */
-    overflow-x: auto; /* Allow scrolling if necessary */
+    padding: 0;
+    margin: 0;
 }
 
-nav li {
-    font-size: 1.5em;
-    font-family: "Francois One", sans-serif;
+.nav-align li {
+    display: inline;
+    margin-right: 20px;
 }
 
-nav li a {
-    display: block;
-    color: olive;
-    padding: 0.5em 1em;
+.nav-align a {
     text-decoration: none;
+    color: olive;
+    font-weight: bold;
+    padding: 0.5em 1em;
     border-radius: 5px; /* Rounded corners for buttons */
     transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.nav-align a:hover {
+    /* text-decoration: underline; */
+    color: white; /* Change text color on hover */
+    background-color: steelblue; /* Background color on hover */
 }
 
 nav li a:hover {
@@ -83,13 +79,15 @@ nav li a:hover {
     background-color: steelblue; /* Background color on hover */
 }
 
+/* Logo */
 .logo {
-    width: 80px; /* Adjust logo size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px;
+    height: auto;
 }
 
-/* Main Content */
+/* Main */
 main {
+    margin: 20px;
     background-color: #fff;
     padding: 2%;
     font-size: 1.15em;
@@ -98,103 +96,89 @@ main {
     line-height: 1.6;
 }
 
-/* Sections */
-.section {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-    font-family: "Francois One", sans-serif;
-    margin-bottom: 10px;
-}
-
-ol {
-    margin-left: 20px;
-    text-align: left;
-}
-
-/* Table Styles */
+/* Table */
 table {
-    width: 100%; /* Full width to fit container */
+    width: 100%;
     border-collapse: collapse;
-    border: 1px solid #ddd;
-    margin: 20px auto;
-    background-color: white;
-    overflow-x: auto; /* Allow horizontal scrolling */
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 caption {
     font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: steelblue;
+    margin: 10px 0;
+    font-family: 'Francois One', sans-serif;
 }
 
-th, td {
-    border: 1px solid #ddd;
+thead th {
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
     padding: 10px;
     text-align: center;
+    font-family: 'Roboto Slab', serif;
 }
 
-th {
-    background-color: #f2f2f2;
-    color: #333;
-    font-weight: bold;
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
 }
 
-.row1 {
-    background-color: #f9f9f9;
+tbody tr:nth-child(even) {
+    background-color: lightblue;
 }
 
-.row2 {
-    background-color: #ffffff;
-}
-
-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Responsive Adjustments */
+/* Responsive Table */
 @media (max-width: 768px) {
     table {
         display: block;
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        width: 100%;
+        white-space: nowrap;
     }
-    
-    thead {
-        display: none; /* Hide header for stacking */
+
+    tbody td {
+        display: block;
+        text-align: left;
     }
-    
-    tbody, tr, td {
-        display: block; /* Stack cells vertically */
-        width: 100%;
-        position: relative;
-        border: 1px solid #ddd;
+
+    tbody tr {
+        display: block;
         margin-bottom: 10px;
     }
-    
-    td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
+
+    thead {
+        display: none;
     }
-    
-    td::before {
-        content: attr(data-label); /* Add labels for each cell */
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 10px;
+
+    tbody td[data-label]:before {
+        content: attr(data-label);
         font-weight: bold;
-        white-space: nowrap;
-        background-color: #f2f2f2;
-        border-right: 1px solid #ddd;
+        display: inline-block;
+        width: 100px;
+        background-color: aliceblue;
+        color: white;
+        padding: 5px;
+        margin-right: 10px;
     }
+}
+
+/* Additional Content Section */
+section {
+    margin: 20px 0;
+    text-align: left;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: 'Francois One', sans-serif;
+}
+
+section p {
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
 }
 
 /* Footer */
@@ -211,68 +195,102 @@ footer p a {
     text-decoration: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 425px) {
-    nav {
-        grid-template-columns: 1fr; /* Stack items vertically */
-        text-align: center;
+/* Media Queries */
+@media (max-width: 992px) {
+    .nav-align ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    nav ul {
-        grid-auto-flow: row; /* Vertical layout */
-        justify-content: center; /* Center items */
-    }
-
-    nav li {
-        margin: 0.5em 0; /* Space between items */
+    .nav-align li {
+        margin: 5px 0;
     }
 }
 
-@media (min-width: 426px) and (max-width: 630px) {
-    nav {
-        grid-template-columns: auto 1fr; /* Maintain logo and nav layout */
+@media (max-width: 768px) {
+    header img.banner {
+        max-height: 200px;
     }
 
-    nav ul {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns for tablets */
-        justify-content: start; /* Align items to the left */
-    }
-}
-
-@media (min-width: 630px) {
-    .tablet-view {
-        display: block;
-    }
-
-    .mobile-view {
-        display: none;
-    }
-}
-
-@media (min-width: 1015px) {
     main {
-        clear: both;
+        margin: 10px;
     }
 
-    .desktop-view {
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody, tr, td {
         display: block;
     }
 
-    .tablet-view, .mobile-view {
-        display: none;
+    tbody td {
+        padding: 10px 5px;
+        text-align: left;
+        position: relative;
+    }
+
+    tbody td[data-label]:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 120px;
+        background-color: steelblue;
+        color: white;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .nav-align ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-align li {
+        margin: 5px 0;
+    }
+
+    .nav-align a {
+        font-size: 1em;
     }
 }
 
-@media (min-width: 1921px) {
-    #container {
-        width: 1920px;
-        margin: 0 auto;
+@media (max-width: 576px) {
+    .nav-align ul {
+        padding: 0;
     }
-}
 
-@media print {
-    body {
-        background-color: aliceblue;
-        color: #000;
+    .nav-align li {
+        margin: 3px 0;
+    }
+
+    .nav-align a {
+        font-size: 0.8em;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    caption {
+        font-size: 1.2em;
+    }
+
+    tbody td[data-label]:before {
+        width: 100px;
+    }
+
+    section h2 {
+        font-size: 1em;
     }
 }
